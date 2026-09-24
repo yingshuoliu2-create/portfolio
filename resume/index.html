@@ -22,8 +22,8 @@
   body{
     font-family:"PingFang SC","Hiragino Sans GB","Heiti SC","Helvetica Neue",Helvetica,Arial,sans-serif;
     color:var(--ink);
-    font-size:8.15pt;
-    line-height:1.43;
+    font-size:8.05pt;
+    line-height:1.4;
     font-variant-numeric:tabular-nums;
   }
   .page{ width:210mm; height:297mm; padding:10.5mm 13.5mm 7.5mm; position:relative; background:var(--paper); }
@@ -39,7 +39,7 @@
   .meta{ text-align:right; font-size:7.9pt; color:var(--sub); line-height:1.85; white-space:nowrap; }
   .meta b{ font-weight:600; color:var(--ink); }
 
-  section{ margin-top:5.6pt; }
+  section{ margin-top:5pt; }
   h2{ display:flex; align-items:baseline; gap:7pt; font-size:8.8pt; font-weight:600; color:var(--ink);
       letter-spacing:.6pt; padding-bottom:2.4pt; margin-bottom:4.2pt; border-bottom:1pt solid var(--ink); }
   h2 .ix{ font-size:6.6pt; font-weight:600; color:#fff; background:var(--accent);
@@ -54,12 +54,12 @@
   .hl{ color:var(--hi); font-weight:600; }
 
   .strip{ display:flex; gap:0; margin-bottom:5.6pt; border-top:1.2pt solid var(--ink); border-bottom:.6pt solid var(--line); }
-  .strip > div{ flex:1; padding:5.8pt 5pt 5.2pt; text-align:center; border-right:.6pt solid var(--line); }
+  .strip > div{ flex:1; padding:5.2pt 5pt 4.8pt; text-align:center; border-right:.6pt solid var(--line); }
   .strip > div:last-child{ border-right:none; }
   .strip .n{ font-size:11.8pt; font-weight:600; color:var(--accent); line-height:1.05; letter-spacing:-.2pt; }
   .strip .t{ font-size:6.3pt; color:var(--sub); margin-top:2.4pt; letter-spacing:.1pt; }
 
-  .job{ margin-bottom:3.8pt; padding-left:7pt; border-left:1.6pt solid var(--line-soft); }
+  .job{ margin-bottom:3.3pt; padding-left:7pt; border-left:1.6pt solid var(--line-soft); }
   .job.lead{ border-left-color:var(--hi); }
   .job:last-child{ margin-bottom:0; }
   .jhead{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1.8pt; }
@@ -72,14 +72,17 @@
   .job.compact .jtitle{ font-weight:600; }
   .job.compact .jtitle i{ margin:0 3pt; }
 
-  .sk{ display:grid; grid-template-columns:max-content 1fr; gap:3.5pt 9pt; align-items:start; }
+  .sk{ display:grid; grid-template-columns:max-content 1fr; gap:3.1pt 8pt; align-items:start; }
   .sk dt{ font-weight:600; font-size:8.1pt; color:var(--ink); white-space:nowrap; padding-top:1.6pt; }
-  .sk dd{ display:flex; flex-wrap:wrap; gap:3.4pt; }
-  .sk dd .tag{ display:inline-block; font-size:6.9pt; color:var(--sub); background:#fff;
-               border:.6pt solid var(--line); border-radius:2.5pt; padding:1.9pt 6.5pt; line-height:1.3; }
+  .sk dd{ display:flex; flex-wrap:wrap; gap:3pt; }
+  .sk dd .tag{ display:inline-block; font-size:6.75pt; color:var(--sub); background:#fff;
+               border:.6pt solid var(--line); border-radius:2.5pt; padding:1.8pt 5.8pt; line-height:1.3; }
   .sk dd .tag.hi{ color:var(--accent); background:var(--tint); border-color:var(--tint-line); font-weight:600; }
+  .sk dd.flow{ align-items:center; gap:0; }
+  .sk dd.flow .tag{ margin:0; }
+  .sk dd.flow i{ font-style:normal; color:var(--hi); font-weight:600; font-size:6.8pt; padding:0 2.2pt; }
 
-  .foot{ margin-top:6pt; padding-top:4.8pt; border-top:1pt solid var(--ink);
+  .foot{ margin-top:5.4pt; padding-top:4.4pt; border-top:1pt solid var(--ink);
          font-size:7.9pt; color:var(--sub); display:flex; gap:13pt; flex-wrap:wrap; }
   .foot b{ color:var(--ink); font-weight:600; }
 
@@ -144,8 +147,8 @@
     </div>
     <ul>
       <li><b>故事创作能力：</b>悉尼大学戏剧表演研究本科（全英文授课），受过剧作结构、角色塑造与影视文本分析训练；独立编剧短片《夜半潮汐》并投递 FIRST 青年电影展超短片单元，能判断<span class="k">题材、人设、钩子与反转</span>是否成立，熟悉国际化短剧的经典题材与内容模式。</li>
-      <li><b>AIGC 全链路与 Agent 编排：</b>不止「会用」AI 工具——擅长任务拆解、<span class="k">多 Agent 编排（Orchestration）、Function Calling 工具调用、RAG 知识库检索与提示词工程</span>，独立搭建贯通选题、剧本、视觉素材、质检到数据复盘的<span class="k">多模态内容生产流水线</span>；以「人在回路」（Human-in-the-loop）的二次编辑守住输出质量下限，单条内容产能由数小时压至<span class="hl">分钟级</span>。</li>
-      <li><b>内容逻辑质检 + 国际化视角：</b>独立运营美区 TikTok 账号，以完播、互动与评论语义为口径逐条复盘，对题材漏洞、人设合理性与节奏问题做校验优化，根据数据与用户反馈快速迭代选题和钩子；全流程以英文完成海外选题研究、脚本与文案，对欧美内容趋势与文化语境敏感（IELTS 6.0，英语可作为工作语言）。</li>
+      <li><b>AIGC 全链路与 Agent 编排：</b>不止「会用」AI 工具——擅长任务拆解、<span class="k">多 Agent 编排（Orchestration）、Function Calling 工具调用、RAG 知识库检索与提示词工程</span>，独立搭建端到端<span class="k">多模态内容生产流水线</span>；以「人在回路」（Human-in-the-loop）二次编辑守住输出质量下限，单条内容产能由数小时压至<span class="hl">分钟级</span>。</li>
+      <li><b>内容逻辑质检 + 国际化视角：</b>对 AI 产出的<span class="k">题材漏洞、人设合理性与节奏问题</span>做校验优化；全流程以英文完成海外选题研究、脚本与文案，对欧美内容趋势与文化语境敏感（IELTS 6.0，英语可作为工作语言）。</li>
     </ul>
   </section>
 
@@ -215,13 +218,17 @@
       <dd>
         <span class="tag hi">剧作结构拆解</span><span class="tag hi">人设与世界观设定</span><span class="tag hi">题材敏感度（逆袭 / 复仇 / 豪门 / 甜宠）</span><span class="tag">钩子与节奏判断</span><span class="tag">反转设计</span><span class="tag">跨文化内容改编</span>
       </dd>
+      <dt>生产工作流</dt>
+      <dd class="flow">
+        <span class="tag hi">趋势洞察</span><i>&rarr;</i><span class="tag hi">选题判断</span><i>&rarr;</i><span class="tag hi">LLM 剧本</span><i>&rarr;</i><span class="tag hi">文生图</span><i>&rarr;</i><span class="tag hi">图像编辑</span><i>&rarr;</i><span class="tag hi">剪映成片</span><i>&rarr;</i><span class="tag hi">数据复盘</span>
+      </dd>
       <dt>AIGC 工具链</dt>
       <dd>
         <span class="tag hi">剧本生成 Claude Code / ChatGPT / Gemini</span><span class="tag hi">文生图 Midjourney</span><span class="tag hi">图像编辑 Nano Banana</span><span class="tag hi">成片剪辑 剪映 CapCut</span><span class="tag">提示词工程与模板库</span><span class="tag">角色一致性 Character Consistency</span><span class="tag">人在回路质检 HITL</span>
       </dd>
       <dt>Agent 与工作流</dt>
       <dd>
-        <span class="tag hi">多 Agent 编排 Orchestration</span><span class="tag hi">Function Calling 工具调用</span><span class="tag">RAG 知识库检索</span><span class="tag">任务拆解与工作流自动化</span>
+        <span class="tag hi">多 Agent 编排 Orchestration</span><span class="tag hi">Function Calling 工具调用</span><span class="tag hi">Claude Code / Codex</span><span class="tag">RAG 知识库检索</span><span class="tag">任务拆解与工作流自动化</span>
       </dd>
       <dt>数据与迭代</dt>
       <dd>
