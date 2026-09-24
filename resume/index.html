@@ -3,96 +3,88 @@
 <head>
 <meta charset="utf-8">
 <title>刘盈铄 简历 · AI短剧内容运营实习生</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   @page { size: A4; margin: 0; }
   * { margin:0; padding:0; box-sizing:border-box; }
   :root{
-    --ink:#14181B;
-    --sub:#454D54;
-    --mute:#868F96;
-    --line:#E3DFD3;
-    --line-soft:#ECE8DC;
-    --accent:#0D3B3C;
-    --hi:#0A7D6B;
-    --tint:#F0F4F1;
-    --tint-line:#D9E6E0;
-    --paper:#FBF9F5;
+    --ink:#0F1318;
+    --sub:#3E4753;
+    --mute:#8B939F;
+    --line:#E1E5EB;
+    --line-soft:#EDF0F4;
+    --accent:#15325F;
+    --hi:#2158B8;
+    --tint:#F2F6FC;
+    --tint-line:#D7E3F5;
+    --paper:#FFFFFF;
   }
   html,body{ -webkit-print-color-adjust:exact; print-color-adjust:exact; background:var(--paper); }
   body{
-    font-family:"PingFang SC","Hiragino Sans GB","Heiti SC",sans-serif;
+    font-family:"PingFang SC","Hiragino Sans GB","Heiti SC","Helvetica Neue",Helvetica,Arial,sans-serif;
     color:var(--ink);
-    font-size:8.35pt;
-    line-height:1.44;
+    font-size:8.15pt;
+    line-height:1.43;
+    font-variant-numeric:tabular-nums;
   }
-  .mono{ font-family:"IBM Plex Mono","PingFang SC",monospace; font-variant-numeric:tabular-nums; }
-  .page{ width:210mm; height:297mm; padding:11.5mm 14mm 8.5mm; position:relative; background:var(--paper); }
+  .page{ width:210mm; height:297mm; padding:10.5mm 13.5mm 7.5mm; position:relative; background:var(--paper); }
 
   header{ display:flex; align-items:flex-end; justify-content:space-between;
-          padding-bottom:6pt; border-bottom:1.4pt solid var(--ink); }
-  .kicker{ font-family:"IBM Plex Mono","PingFang SC","Hiragino Sans GB",monospace; font-size:6.8pt; letter-spacing:2.4pt; color:var(--hi);
-           font-weight:600; margin-bottom:4.5pt; }
-  .who h1{ font-size:22pt; font-weight:700; letter-spacing:5pt; line-height:1; }
+          padding-bottom:5pt; border-bottom:1.6pt solid var(--ink); }
+  .kicker{ font-size:6.6pt; letter-spacing:2.6pt; color:var(--hi); font-weight:600; margin-bottom:4.5pt; }
+  .who h1{ font-size:20.5pt; font-weight:600; letter-spacing:5pt; line-height:1; }
   .who .aim{ margin-top:6pt; font-size:8.6pt; font-weight:600; color:var(--ink); letter-spacing:.1pt; }
   .who .aim .pipe{ color:var(--line); margin:0 5.5pt; font-weight:400; }
   .who .aim .loctag{ display:inline-block; white-space:nowrap; }
   .who .aim .loc{ color:var(--hi); font-weight:600; }
-  .meta{ text-align:right; font-size:7.9pt; color:var(--sub); line-height:1.85; white-space:nowrap;
-         font-family:"IBM Plex Mono","PingFang SC",monospace; }
+  .meta{ text-align:right; font-size:7.9pt; color:var(--sub); line-height:1.85; white-space:nowrap; }
   .meta b{ font-weight:600; color:var(--ink); }
 
-  section{ margin-top:6.6pt; }
-  h2{ display:flex; align-items:baseline; gap:7pt; font-size:8.8pt; font-weight:700; color:var(--ink);
-      letter-spacing:.4pt; padding-bottom:2.8pt; margin-bottom:5.4pt; border-bottom:1pt solid var(--ink); }
-  h2 .ix{ font-family:"IBM Plex Mono","PingFang SC","Hiragino Sans GB",monospace; font-size:6.8pt; font-weight:600; color:var(--accent);
-          border:1pt solid var(--accent); width:12.5pt; height:12.5pt; line-height:11pt; text-align:center;
-          border-radius:2pt; flex:none; }
-  h2 em{ font-style:normal; font-family:"IBM Plex Mono","PingFang SC","Hiragino Sans GB",monospace; font-size:6.4pt; color:var(--mute);
-         letter-spacing:1.6pt; font-weight:600; margin-left:auto; }
+  section{ margin-top:5.6pt; }
+  h2{ display:flex; align-items:baseline; gap:7pt; font-size:8.8pt; font-weight:600; color:var(--ink);
+      letter-spacing:.6pt; padding-bottom:2.4pt; margin-bottom:4.2pt; border-bottom:1pt solid var(--ink); }
+  h2 .ix{ font-size:6.6pt; font-weight:600; color:#fff; background:var(--accent);
+          width:12pt; height:12pt; line-height:12pt; text-align:center; border-radius:1.5pt; flex:none; }
+  h2 em{ font-style:normal; font-size:6.3pt; color:var(--mute); letter-spacing:1.8pt; font-weight:600;
+         margin-left:auto; }
 
   ul{ list-style:none; }
-  li{ display:list-item; padding-left:9pt; margin-bottom:1.6pt; color:var(--sub); }
+  li{ display:list-item; padding-left:8.8pt; margin-bottom:1.25pt; color:var(--sub); }
   li::marker{ content:"– "; color:var(--hi); font-size:.8em; }
   li b, .k{ color:var(--ink); font-weight:600; }
-  .hl{ color:var(--hi); font-weight:700; }
+  .hl{ color:var(--hi); font-weight:600; }
 
-  .strip{ display:flex; gap:0; margin-bottom:7.2pt; border-top:1pt solid var(--ink); border-bottom:.6pt solid var(--line); }
-  .strip > div{ flex:1; padding:6.4pt 5pt 5.8pt; text-align:center; border-right:.6pt solid var(--line); }
+  .strip{ display:flex; gap:0; margin-bottom:5.6pt; border-top:1.2pt solid var(--ink); border-bottom:.6pt solid var(--line); }
+  .strip > div{ flex:1; padding:5.8pt 5pt 5.2pt; text-align:center; border-right:.6pt solid var(--line); }
   .strip > div:last-child{ border-right:none; }
-  .strip .n{ font-family:"IBM Plex Mono","PingFang SC","Hiragino Sans GB",monospace; font-size:12.5pt; font-weight:600; color:var(--accent);
-             line-height:1.05; letter-spacing:-.3pt; }
-  .strip .t{ font-size:6.3pt; color:var(--sub); margin-top:2.6pt; letter-spacing:.1pt; }
+  .strip .n{ font-size:11.8pt; font-weight:600; color:var(--accent); line-height:1.05; letter-spacing:-.2pt; }
+  .strip .t{ font-size:6.3pt; color:var(--sub); margin-top:2.4pt; letter-spacing:.1pt; }
 
-  .job{ margin-bottom:4.6pt; padding-left:7pt; border-left:1.6pt solid var(--line-soft); }
+  .job{ margin-bottom:3.8pt; padding-left:7pt; border-left:1.6pt solid var(--line-soft); }
   .job.lead{ border-left-color:var(--hi); }
   .job:last-child{ margin-bottom:0; }
-  .jhead{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:2.4pt; }
-  .jtitle{ font-size:8.9pt; font-weight:700; }
+  .jhead{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1.8pt; }
+  .jtitle{ font-size:8.9pt; font-weight:600; }
   .jtitle i{ font-style:normal; color:var(--mute); font-weight:400; margin:0 4pt; }
   .jtitle span{ font-weight:600; color:var(--hi); font-size:8.1pt; }
-  .jdate{ font-family:"IBM Plex Mono","PingFang SC","Hiragino Sans GB",monospace; font-size:7.4pt; color:var(--mute); white-space:nowrap;
-          padding-left:8pt; }
+  .jdate{ font-size:7.4pt; color:var(--mute); white-space:nowrap; padding-left:8pt; }
 
   .job.compact .jhead{ margin-bottom:0; }
   .job.compact .jtitle{ font-weight:600; }
   .job.compact .jtitle i{ margin:0 3pt; }
 
-  .sk{ display:grid; grid-template-columns:max-content 1fr; gap:5.4pt 10pt; align-items:start; }
-  .sk dt{ font-weight:700; font-size:8.2pt; color:var(--ink); white-space:nowrap; padding-top:2pt; }
-  .sk dd{ display:flex; flex-wrap:wrap; gap:3.6pt; }
+  .sk{ display:grid; grid-template-columns:max-content 1fr; gap:3.9pt 9pt; align-items:start; }
+  .sk dt{ font-weight:600; font-size:8.1pt; color:var(--ink); white-space:nowrap; padding-top:1.6pt; }
+  .sk dd{ display:flex; flex-wrap:wrap; gap:3.4pt; }
   .sk dd .tag{ display:inline-block; font-size:6.9pt; color:var(--sub); background:#fff;
-               border:.6pt solid var(--line); border-radius:3pt; padding:2pt 6.5pt; line-height:1.3; }
+               border:.6pt solid var(--line); border-radius:2.5pt; padding:1.9pt 6.5pt; line-height:1.3; }
   .sk dd .tag.hi{ color:var(--accent); background:var(--tint); border-color:var(--tint-line); font-weight:600; }
 
-  .foot{ margin-top:9.5pt; padding-top:6.2pt; border-top:.75pt solid var(--ink);
+  .foot{ margin-top:7pt; padding-top:5.2pt; border-top:1pt solid var(--ink);
          font-size:7.9pt; color:var(--sub); display:flex; gap:13pt; flex-wrap:wrap; }
   .foot b{ color:var(--ink); font-weight:600; }
 
   .hdr-right{ display:flex; align-items:flex-end; gap:9pt; }
-  .photo{ width:17mm; height:21.5mm; object-fit:cover; border-radius:2pt; border:1pt solid var(--accent); flex:none; }
+  .photo{ width:17mm; height:21.5mm; object-fit:cover; border-radius:1.5pt; border:.8pt solid var(--line); flex:none; }
 
   @media screen{
     body{ background:#EDEAE1; padding:28px 0 48px; display:flex; justify-content:center; }
@@ -152,7 +144,7 @@
     </div>
     <ul>
       <li><b>故事创作能力：</b>悉尼大学戏剧表演研究本科（全英文授课），受过剧作结构、角色塑造与影视文本分析训练；独立编剧短片《夜半潮汐》并投递 FIRST 青年电影展超短片单元，能判断<span class="k">题材、人设、钩子与反转</span>是否成立，熟悉国际化短剧的经典题材与内容模式。</li>
-      <li><b>AI Agent 搭建与 AIGC 技术深度理解：</b>不止「使用」AI 工具——擅长任务拆解、<span class="k">多 Agent 编排、工具与 API 调用、知识库检索（RAG）及提示词工程</span>；独立搭建覆盖选题判断、剧本生成、二次编辑到数据复盘的端到端 Agent 工作流，打通信息检索、内容生成、自动执行到复盘的全流程，单条脚本生产周期压至<span class="hl">分钟级</span>。</li>
+      <li><b>AIGC 全链路与 Agent 搭建：</b>不止「会用」AI 工具——擅长任务拆解、<span class="k">多 Agent 编排、工具与 API 调用、知识库检索（RAG）与提示词工程</span>，独立搭建覆盖选题、剧本、视觉素材、质检到数据复盘的端到端工作流；沉淀可复用的<span class="k">提示词风格库</span>以控制角色与画面一致性——AI 内容规模化生产中最难守住的一环，单条内容生产周期由数小时压至<span class="hl">分钟级</span>。</li>
       <li><b>内容逻辑质检 + 国际化视角：</b>独立运营美区 TikTok 账号，以完播、互动与评论语义为口径逐条复盘，对题材漏洞、人设合理性与节奏问题做校验优化，根据数据与用户反馈快速迭代选题和钩子；全流程以英文完成海外选题研究、脚本与文案，对欧美内容趋势与文化语境敏感（IELTS 6.0，英语可作为工作语言）。</li>
     </ul>
   </section>
@@ -166,7 +158,8 @@
         <div class="jdate">2025.05 – 2025.08</div>
       </div>
       <ul>
-        <li><b>AI 内容生产与输出：</b>从选题判断、AI 脚本生成（Claude Code / ChatGPT / Gemini）、AI 视觉素材生成（Midjourney / Nano Banana）到成片剪辑，跑通完整 AI 辅助内容生产链路，单条生产周期由数小时压至分钟级，支撑稳定日更产能，<b>1 个月粉丝从 0 突破 2 万</b>。</li>
+        <li><b>AI 内容生产链路：</b>从选题判断、AI 脚本生成（Claude Code / ChatGPT / Gemini）、AI 视觉素材生成（Midjourney / Nano Banana）到成片剪辑，跑通完整 AIGC 生产链路，单条周期由数小时压至分钟级，支撑稳定日更产能，<b>1 个月粉丝从 0 突破 2 万</b>。</li>
+        <li><b>提示词工程与一致性控制：</b>把开头钩子、转折位置与画面调性固化为可复用的提示词模板与风格库，逐条迭代参数并对 AI 产出做二次编辑，解决 AI 生成内容最易失控的<b>角色与风格漂移</b>问题，保证批量产出仍像同一个账号。</li>
         <li><b>数据闭环驱动迭代：</b>以完播、互动与评论语义为口径逐条复盘，形成「数据 → 假设 → 验证 → 下一轮选题」的标准数据闭环，反推题材、人设与钩子形态的判断标准；跑通变现路径，<b>单条视频平均变现约 100 美元</b>。</li>
       </ul>
     </div>
@@ -177,7 +170,7 @@
         <div class="jdate">在校期间</div>
       </div>
       <ul>
-        <li>独立完成剧本创作：从题材构思、人设设定、冲突设计到结局反转，产出可执行分镜的完整剧本；投递 FIRST 青年电影展超短片单元。</li>
+        <li>独立完成剧本创作：题材构思、人设设定、冲突设计到结局反转，产出可执行分镜的完整剧本；投递 FIRST 青年电影展超短片单元。</li>
       </ul>
     </div>
 
@@ -222,9 +215,13 @@
       <dd>
         <span class="tag hi">剧作结构拆解</span><span class="tag hi">人设与世界观设定</span><span class="tag hi">题材敏感度（逆袭 / 复仇 / 豪门 / 甜宠）</span><span class="tag">钩子与节奏判断</span><span class="tag">反转设计</span><span class="tag">跨文化内容改编</span>
       </dd>
-      <dt>AIGC 与 Agent</dt>
+      <dt>AIGC 内容生产</dt>
       <dd>
-        <span class="tag hi">文本生成 Claude Code / ChatGPT / Gemini</span><span class="tag hi">视觉生成 Midjourney / Nano Banana</span><span class="tag hi">任务拆解与多 Agent 编排</span><span class="tag">工具与 API 调用</span><span class="tag">RAG 知识库检索</span><span class="tag">AI 生成内容逻辑质检</span>
+        <span class="tag hi">文本生成 Claude Code / ChatGPT / Gemini</span><span class="tag hi">视觉生成 Midjourney / Nano Banana</span><span class="tag hi">提示词工程与风格库</span><span class="tag hi">角色与画面一致性控制</span><span class="tag">AI 生成内容逻辑质检</span><span class="tag">AI 辅助剪辑与成片</span>
+      </dd>
+      <dt>Agent 与工作流</dt>
+      <dd>
+        <span class="tag hi">任务拆解与多 Agent 编排</span><span class="tag">工具与 API 调用</span><span class="tag">RAG 知识库检索</span><span class="tag">端到端工作流沉淀</span>
       </dd>
       <dt>数据与迭代</dt>
       <dd>
