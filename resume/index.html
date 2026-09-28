@@ -48,7 +48,7 @@
          margin-left:auto; }
 
   ul{ list-style:none; }
-  li{ display:list-item; padding-left:8.8pt; margin-bottom:1.05pt; color:var(--sub); }
+  li{ display:list-item; padding-left:8.8pt; margin-bottom:.9pt; color:var(--sub); }
   li::marker{ content:"– "; color:var(--hi); font-size:.8em; }
   li b, .k{ color:var(--ink); font-weight:600; }
   .hl{ color:var(--hi); font-weight:600; }
@@ -82,7 +82,7 @@
   .sk dd.flow .tag{ margin:0; }
   .sk dd.flow i{ font-style:normal; color:var(--hi); font-weight:600; font-size:6.8pt; padding:0 2.2pt; }
 
-  .foot{ margin-top:5.4pt; padding-top:4.4pt; border-top:1pt solid var(--ink);
+  .foot{ margin-top:5pt; padding-top:4pt; border-top:1pt solid var(--ink);
          font-size:7.9pt; color:var(--sub); display:flex; gap:13pt; flex-wrap:wrap; }
   .foot b{ color:var(--ink); font-weight:600; }
 
@@ -161,7 +161,7 @@
         <div class="jdate">2025.05 – 2025.08</div>
       </div>
       <ul>
-        <li><b>多模态 AIGC 生产链路：</b>打通「LLM 剧本生成（Claude Code / ChatGPT / Gemini）→ 文生图与图像编辑（Midjourney / Nano Banana）→ 剪映 / Final Cut 成片」全链路，覆盖 AI 短剧从剧本到成片的完整生产环节，单条内容产能由数小时压至分钟级，支撑稳定日更供给，<b>1 个月粉丝从 0 突破 2 万</b>。</li>
+        <li><b>多模态 AIGC 生产链路：</b>打通「LLM 剧本生成（Claude Code / ChatGPT / Gemini）→ 文生图与图像编辑（Midjourney / Stable Diffusion / Nano Banana）→ AI 视频生成（Seedance / Runway）→ 剪映成片」全链路，覆盖 AI 短剧从剧本到成片的完整生产环节，单条内容产能由数小时压至分钟级，支撑稳定日更供给，<b>1 个月粉丝从 0 突破 2 万</b>。</li>
         <li><b>提示词工程与角色一致性：</b>把开头钩子、转折位置与画面调性固化为可复用的提示词模板与风格库，通过参数迭代与人在回路二次编辑，收敛 AIGC 量产中最易失控的<b>角色一致性（Character Consistency）与风格漂移</b>，保证批量产出维持统一视觉识别。</li>
         <li><b>数据闭环驱动迭代：</b>以完播、互动与评论语义为口径逐条复盘，形成「数据 → 假设 → 验证 → 下一轮选题」的标准数据闭环，反推题材、人设与钩子形态的判断标准；跑通变现路径，<b>单条视频平均变现约 100 美元</b>。</li>
       </ul>
@@ -220,15 +220,15 @@
       </dd>
       <dt>生产工作流</dt>
       <dd class="flow">
-        <span class="tag hi">趋势洞察</span><i>&rarr;</i><span class="tag hi">选题判断</span><i>&rarr;</i><span class="tag hi">LLM 剧本</span><i>&rarr;</i><span class="tag hi">文生图</span><i>&rarr;</i><span class="tag hi">图像编辑</span><i>&rarr;</i><span class="tag hi">剪映成片</span><i>&rarr;</i><span class="tag hi">数据复盘</span>
+        <span class="tag hi">趋势洞察</span><i>&rarr;</i><span class="tag hi">选题判断</span><i>&rarr;</i><span class="tag hi">LLM 剧本</span><i>&rarr;</i><span class="tag hi">文生图</span><i>&rarr;</i><span class="tag hi">AI 视频生成</span><i>&rarr;</i><span class="tag hi">剪映成片</span><i>&rarr;</i><span class="tag hi">数据复盘</span>
       </dd>
       <dt>AIGC 工具链</dt>
       <dd>
-        <span class="tag hi">剧本生成 Claude Code / ChatGPT / Gemini</span><span class="tag hi">文生图 Midjourney</span><span class="tag hi">图像编辑 Nano Banana</span><span class="tag hi">成片剪辑 剪映 CapCut</span><span class="tag">提示词工程与模板库</span><span class="tag">角色一致性 Character Consistency</span><span class="tag">人在回路质检 HITL</span>
+        <span class="tag hi">剧本生成 Claude Code / ChatGPT / Gemini</span><span class="tag hi">文生图 Midjourney</span><span class="tag hi">节点工作流 Stable Diffusion / ComfyUI</span><span class="tag hi">AI 视频生成 Seedance / Runway</span><span class="tag hi">图像编辑 Nano Banana</span><span class="tag">成片剪辑 剪映 CapCut</span><span class="tag">提示词工程与模板库</span><span class="tag">角色一致性 Character Consistency</span><span class="tag">人在回路质检 HITL</span>
       </dd>
       <dt>Agent 与工作流</dt>
       <dd>
-        <span class="tag hi">多 Agent 编排 Orchestration</span><span class="tag hi">Function Calling 工具调用</span><span class="tag hi">Claude Code / Codex</span><span class="tag">RAG 知识库检索</span><span class="tag">任务拆解与工作流自动化</span>
+        <span class="tag hi">多 Agent 编排 Orchestration</span><span class="tag hi">Coze</span><span class="tag hi">Function Calling 工具调用</span><span class="tag hi">Claude Code / Codex</span><span class="tag">RAG 知识库检索</span><span class="tag">任务拆解与工作流自动化</span>
       </dd>
       <dt>数据与迭代</dt>
       <dd>
