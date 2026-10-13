@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Ivana Liu</title>
+<title>Ivana Liu — AI Short-Drama Content Ops</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Portfolio of Ivana Liu (Liu Yingshuo) — AIGC film & UI product design, for TikTok short-drama content and creator roles.">
+<meta name="description" content="Portfolio of Ivana Liu (Liu Yingshuo) — AI short-drama content ops: AIGC production pipeline, data loop, self-built Agent workflow. Applying to TikTok, Shanghai.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -173,10 +173,11 @@
   .bigstats .n{ font-family:"Fraunces",serif; font-weight:600; font-size:clamp(34px,4.2vw,52px); color:var(--accent-ink); letter-spacing:-.02em; line-height:1; }
   .bigstats .t{ margin-top:10px; font-size:13.5px; color:var(--ink-mute); }
 
-  .pipeline{ margin-top:52px; display:grid; grid-template-columns:repeat(6,1fr); border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--surface); box-shadow:var(--shadow); }
+  .pipeline{ margin-top:52px; display:grid; grid-template-columns:repeat(var(--cols,6),1fr); border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--surface); box-shadow:var(--shadow); }
   @media (max-width:900px){ .pipeline{ grid-template-columns:repeat(3,1fr) } }
   @media (max-width:560px){ .pipeline{ grid-template-columns:1fr 1fr } }
   .pstep{ padding:24px 18px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .pipeline .pstep:last-child{ border-right:none; }
   .pipeline .pstep:nth-child(6n){ border-right:none; }
   @media (max-width:900px){ .pipeline .pstep:nth-child(3n){ border-right:none } .pipeline .pstep:nth-child(6n){ border-right:1px solid var(--line) } }
   @media (max-width:560px){ .pipeline .pstep:nth-child(2n){ border-right:none } }
@@ -350,6 +351,12 @@
   .dsys .type .big{ font-family:"Fraunces",serif; font-size:26px; color:#EDE9DE; font-weight:600; letter-spacing:-.01em; }
   .dsys .type .small{ font-family:"Archivo",sans-serif; font-size:12.5px; color:#9AA096; margin-top:4px; }
 
+  .jd td:first-child{ width:27%; }
+  .jd td.k small{ display:block; margin-top:4px; font-family:"IBM Plex Mono",monospace; font-weight:500; font-size:10.5px; letter-spacing:.6px; color:var(--ink-mute); }
+  .jd td a{ color:var(--accent-ink); text-decoration:none; border-bottom:1px solid var(--line); white-space:nowrap; font-family:"IBM Plex Mono",monospace; font-size:12px; }
+  .jd td a:hover{ border-color:var(--accent); }
+  .stack-row{ margin-top:18px; display:flex; flex-wrap:wrap; gap:8px; }
+  .supporting{ display:inline-block; margin-left:10px; padding:2px 9px; border:1px solid var(--line); border-radius:99px; font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:1.2px; color:var(--ink-mute); vertical-align:middle; text-transform:uppercase; }
 </style>
 </head>
 <body>
@@ -358,9 +365,11 @@
   <div class="rail-brand">IVANA&nbsp;LIU</div>
   <ul class="rail-list">
     <li><a href="#hero" data-nav><span class="dot"></span><span class="rail-label">Intro</span></a></li>
-    <li><a href="#overview" data-nav><span class="dot"></span><span class="rail-label">Overview</span></a></li>
-    <li><a href="#film" data-nav><span class="leader" style="--p:50"><b>01</b></span><span class="rail-label">Film</span></a></li>
-    <li><a href="#ui" data-nav><span class="leader" style="--p:100"><b>02</b></span><span class="rail-label">UI</span></a></li>
+    <li><a href="#overview" data-nav><span class="dot"></span><span class="rail-label">Fit</span></a></li>
+    <li><a href="#ops" data-nav><span class="leader" style="--p:25"><b>01</b></span><span class="rail-label">Ops</span></a></li>
+    <li><a href="#agent" data-nav><span class="leader" style="--p:50"><b>02</b></span><span class="rail-label">Agent</span></a></li>
+    <li><a href="#film" data-nav><span class="leader" style="--p:75"><b>03</b></span><span class="rail-label">Film</span></a></li>
+    <li><a href="#ui" data-nav><span class="leader" style="--p:100"><b>04</b></span><span class="rail-label">UI</span></a></li>
     <li><a href="#contact" data-nav><span class="dot"></span><span class="rail-label">Contact</span></a></li>
   </ul>
   <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light / dark">
@@ -373,21 +382,21 @@
   <header class="hero" id="hero">
     <div class="grain" aria-hidden="true"></div>
     <div class="wrap">
-      <div class="eyebrow"><span class="rec"></span>REC · PORTFOLIO 2026</div>
+      <div class="eyebrow"><span class="rec"></span>PORTFOLIO 2026 · TIKTOK AI SHORT DRAMA</div>
       <h1>Ivana Liu</h1>
-      <div class="sub">AIGC Film &amp; Content · UI Product Design</div>
-      <p class="hero-lede">A drama &amp; screen studies major who turns taste into a <b>repeatable content pipeline</b> — from judging a story, to producing it in minutes with AI, to reading the data and making the next one better.</p>
+      <div class="sub">AI Short-Drama Content Ops · AIGC × Agent Workflow</div>
+      <p class="hero-lede">I judge a story, run it through a <b>multimodal AIGC pipeline</b> in minutes, and let the <b>data loop</b> decide the next round &mdash; first on my own US TikTok account, then as a self-built <b>Agent workflow</b> for cross-border e-commerce ops.</p>
       <div class="hero-roles">
         <span class="chip">AI Content Ops · Short Drama</span>
-        <span class="chip">Strategy · Film &amp; TV Ecosystem</span>
-        <span class="chip">Creator Ops · Film &amp; TV</span>
         <span class="chip">TikTok · Shanghai</span>
+        <span class="chip">English as working language</span>
+        <span class="chip">Class of 2026 · Univ. of Sydney</span>
       </div>
       <div class="hero-stats">
         <div class="hstat"><div class="n mono">0&rarr;20K</div><div class="t">TikTok US · 1 month</div></div>
         <div class="hstat"><div class="n mono">$100</div><div class="t">avg / video earned</div></div>
         <div class="hstat"><div class="n mono">Minutes</div><div class="t">per-video build time</div></div>
-        <div class="hstat"><div class="n mono">1+1</div><div class="t">film · UI case</div></div>
+        <div class="hstat"><div class="n mono">1</div><div class="t">self-built Agent workflow</div></div>
       </div>
     </div>
     <div class="scroll-cue"><span class="ln"></span>SCROLL</div>
@@ -395,42 +404,124 @@
 
   <section id="overview">
     <div class="wrap">
-      <div class="kicker">Overview</div>
-      <h2 class="h-lg">Two things I can prove: I can make the content, and I can think the product through.</h2>
-      <p class="lede-lg">This portfolio keeps two threads — <b>AIGC film &amp; content</b>, and <b>UI product design</b>. The first shows I can judge a story, produce it steadily with AI, and improve it with data. The second shows I can turn an abstract need into a user path and a usable interface.</p>
+      <div class="kicker">Role fit</div>
+      <h2 class="h-lg">What an AI short-drama content-ops role asks &mdash; and where I've already done it.</h2>
+      <p class="lede-lg">Four things matter: <b>story judgment, a content workflow that scales, a data loop, and an international lens.</b> Each row below points to the case that proves it.</p>
 
-      <div class="tracks reveal">
-        <div class="track">
-          <div class="pn mono">PART 01</div>
-          <h3>AIGC Film &amp; Content</h3>
-          <p>The full path from judging a topic to a finished cut. The point isn't "I can use AI" — it's that I turn AI into predictable content supply: sourced topics, no style drift, plannable output, data that loops back into the next round.</p>
-          <ul>
-            <li><b>Story judgment</b> — break a topic into character, conflict, emotional beat and a reason to watch.</li>
-            <li><b>AI throughput</b> — templated topic banks, hook patterns and prompt style libraries cut per-video build time to minutes.</li>
-            <li><b>Data review</b> — infer the next round's topics and hooks from drop-off points and comment semantics.</li>
-            <li><b>Visual assets</b> — translate an abstract theme into reusable theme / character / scene / shot prompts.</li>
-          </ul>
-          <div class="cases"><b>CASE 01</b> Spiral — experimental AI film &amp; the US TikTok content system</div>
-        </div>
-        <div class="track">
-          <div class="pn mono">PART 02</div>
-          <h3>UI Product Design</h3>
-          <p>Turn a complex, abstract rule set into an interface a user reads in three seconds and is willing to act on. Covers user research, competitive analysis, persona &amp; journey, information architecture, user flow and high-fidelity screens.</p>
-          <ul>
-            <li><b>Research</b> — 4 depth interviews inside a 9-person sample to find real decision blockers, not assumed needs.</li>
-            <li><b>Mechanism</b> — convert an unexplainable rule into an explainable recommendation the user trusts.</li>
-            <li><b>Architecture</b> — user flow and page hierarchy so the day's decision fits on one screen.</li>
-            <li><b>Delivery</b> — component language, colour logic and a high-fidelity screen set ready for build.</li>
-          </ul>
-          <div class="cases"><b>CASE 02</b> FateWear — recommendation-driven mobile product, research to hi-fi UI</div>
-        </div>
+      <div class="tbl-wrap reveal">
+        <table class="jd">
+          <thead><tr><th>The job asks for</th><th>What I did</th><th>Case</th></tr></thead>
+          <tbody>
+            <tr><td class="k">Story &amp; script judgment<small>topic · persona · hook · twist</small></td><td>Screenwriting-trained (3-year English-taught degree). Wrote the short film <i>Midnight Tide</i> end to end &mdash; premise, characters, conflict, reversal. Fixed templates for the first three seconds and the turn.</td><td><a href="#ops">Case 01</a></td></tr>
+            <tr><td class="k">Content workflow &amp; capacity<small>output · QC</small></td><td>LLM script &rarr; image &rarr; AI video &rarr; edit, run as a repeatable line. Per-video build time from hours to minutes; human-in-the-loop review holds character consistency and style.</td><td><a href="#ops">Case 01</a></td></tr>
+            <tr><td class="k">Data-driven growth loop<small>flywheel · iteration</small></td><td>Completion, engagement and comment semantics reviewed per video: data &rarr; hypothesis &rarr; test &rarr; next topic. 0 &rarr; 20K followers in one month; ~$100 average earned per video.</td><td><a href="#ops">Case 01</a></td></tr>
+            <tr><td class="k">Workflow building &amp; automation<small>Agent · orchestration</small></td><td>Built an operations Agent workflow for a Temu &amp; TikTok Shop project: task decomposition, multi-agent orchestration and function calling replace manual hand-offs.</td><td><a href="#agent">Case 02</a></td></tr>
+            <tr><td class="k">International &amp; cross-cultural<small>English · overseas audience</small></td><td>US account run entirely in English &mdash; research, scripts, copy. Overseas distribution internship (English sales materials, 5 market reports). IELTS 6.0.</td><td><a href="#ops">Case 01</a></td></tr>
+            <tr><td class="k">Taste &amp; visual control<small>aesthetic · consistency</small></td><td><i>Spiral</i>, an experimental AI film: abstract theme broken into a motif set so the style holds across generations.</td><td><a href="#film">Case 03</a></td></tr>
+          </tbody>
+        </table>
       </div>
 
       <div class="meta-row reveal">
-        <div><span>Education</span>The University of Sydney — Theatre &amp; Performance Studies, BA</div>
-        <div><span>Tools</span>Claude Code · ChatGPT · Midjourney · Figma · Final Cut Pro</div>
+        <div><span>Education</span>The University of Sydney &mdash; Theatre &amp; Performance Studies, Bachelor (conferred Mar 2026)<br>RMIT &mdash; Master of Communication Design (offer, Mar 2027 intake)</div>
+        <div><span>AIGC stack</span>Claude Code · ChatGPT · Gemini · Midjourney · Stable Diffusion / ComfyUI · Nano Banana · Seedance · Runway · CapCut</div>
         <div><span>Language</span>English as working language · IELTS 6.0</div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ CASE 01 · CONTENT OPS ============ -->
+  <section id="ops">
+    <div class="wrap">
+      <div class="kicker">Case 01 &middot; Content system</div>
+      <h2 class="h-lg">From zero to 20K on US TikTok: a production line, not a lucky video</h2>
+      <p class="lede-lg">On a solo US TikTok account I ran the whole loop — positioning, topics, scripts, cuts, publishing, review and monetisation. It's my first-hand read on overseas short-video audiences, and where I actually turned AI into content supply rather than a one-off tool.</p>
+
+      <div class="bigstats reveal">
+        <div><div class="n">0&rarr;20K</div><div class="t">followers in 1 month (US)</div></div>
+        <div><div class="n">$100</div><div class="t">average earned per video</div></div>
+        <div><div class="n">Minutes</div><div class="t">per-video build time (was hours)</div></div>
+      </div>
+
+      <div class="pipeline reveal">
+        <div class="pstep"><div class="i">01</div><h4>Trend watch</h4><p>Track overseas charts, comments and rivals — record the emotion being discussed, not just the tag.</p></div>
+        <div class="pstep"><div class="i">02</div><h4>Topic call</h4><p>Filter by "who watches / why they stop / what they leave with"; drop hot topics with no reason to watch.</p></div>
+        <div class="pstep"><div class="i">03</div><h4>Script</h4><p>AI drafts; I fix the hook, pace and ending. Fixed templates for the first three seconds and the turn.</p></div>
+        <div class="pstep"><div class="i">04</div><h4>Visuals</h4><p>A prompt style library keeps the look consistent so videos don't feel like different accounts.</p></div>
+        <div class="pstep"><div class="i">05</div><h4>Publish test</h4><p>Test several titles and covers on the same cut; watch first-hours completion and engagement.</p></div>
+        <div class="pstep"><div class="i">06</div><h4>Data review</h4><p>Feed drop-off points, comment keywords and conversion back into the topic bank as next hypotheses.</p></div>
+      </div>
+
+      <div class="kicker" style="margin-top:88px">Production stack</div>
+      <h2 class="h-lg">The AIGC chain, tool by tool</h2>
+      <p class="lede-lg">Every stage has a named tool, a human check, and one thing it must not break. The check that matters most is <b>character consistency</b> &mdash; the failure AI series hit first.</p>
+      <div class="pipeline reveal" style="--cols:4">
+        <div class="pstep"><div class="i">SCRIPT</div><h4>LLM drafting</h4><p>Claude Code / ChatGPT / Gemini draft beats; I own the hook, pace and ending.</p></div>
+        <div class="pstep"><div class="i">IMAGE</div><h4>Text-to-image</h4><p>Midjourney, Stable Diffusion / ComfyUI, Nano Banana for edits. A prompt style library keeps the look fixed.</p></div>
+        <div class="pstep"><div class="i">VIDEO</div><h4>AI video</h4><p>Seedance / Runway turn stills into motion; parameter iteration plus human re-edit against drift.</p></div>
+        <div class="pstep"><div class="i">CUT</div><h4>Edit &amp; ship</h4><p>CapCut assembles the cut; title and cover variants go out for testing.</p></div>
+      </div>
+
+      <div class="kicker" style="margin-top:88px">Extension &middot; method demo</div>
+      <h2 class="h-lg">If I were starting an AI short drama, here's what I'd ship first</h2>
+      <p class="lede-lg">A method demo, not a finished project. It shows what I'd hand over in week one of a short-drama role, and the bar I use to judge whether a series can stand up.</p>
+
+      <div class="tbl-wrap reveal">
+        <table>
+          <thead><tr><th style="width:20%">Deliverable</th><th style="width:42%">Content</th><th>Bar it must clear</th></tr></thead>
+          <tbody>
+            <tr><td class="k">Topic &amp; audience</td><td>Genre, target viewer, core payoff, reference titles and the point of difference</td><td>One sentence on "who opens this, in what mood"</td></tr>
+            <tr><td class="k">Case library</td><td>Teardowns of strong short dramas &amp; AI dramas, distilled into reusable opening and twist templates</td><td>Each template names the episode and second it works</td></tr>
+            <tr><td class="k">Character cards</td><td>Identity, desire, secret, relational tension, voice and a visual anchor</td><td>Drop the name — the audience still knows who it is</td></tr>
+            <tr><td class="k">Hook sheet</td><td>Opening suspense, mid-episode twist and end-of-episode cliff for every episode</td><td>The cliff makes you tap the next one now</td></tr>
+            <tr><td class="k">Visual library</td><td>Character-consistency prompts, scene assets, light and colour baselines</td><td>Any three episodes read as one series</td></tr>
+            <tr><td class="k">Output &amp; review</td><td>Episodes per week, title matrix, cover options, completion and retention metrics</td><td>Every episode answers "what to change next"</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note reveal"><b>Why I can write this:</b> every row maps to something I actually ran on the US TikTok account — just at the grain of a series instead of a single video. The bars come from mistakes I've made myself: style drift, hooks that spin, comment sections that never discuss the character.</div>
+    </div>
+  </section>
+
+  <!-- ============ CASE 02 · AGENT ============ -->
+  <section id="agent">
+    <div class="wrap">
+      <div class="case-head">
+        <div>
+          <div class="kicker">Case 02 &middot; Agent workflow</div>
+          <h2 class="h-lg">An operations control panel, built as an Agent workflow</h2>
+        </div>
+        <div class="case-tag">TEMU &amp; TIKTOK SHOP<br>cross-border e-commerce &middot; 2025.08 &ndash; present</div>
+      </div>
+      <p class="lede-lg">The content-ops habit &mdash; make the loop explicit, then automate it. For a cross-border store I chained trend input, AI-assisted design, content packaging, listing compliance review and data review into one repeatable workflow, so people stop passing files back and forth.</p>
+
+      <div class="role-row reveal">
+        <div><b>Role</b>Ops control panel build &middot; brand planning</div>
+        <div><b>Method</b>Task decomposition &middot; multi-agent orchestration &middot; function calling</div>
+      </div>
+
+      <div class="pipeline reveal" style="--cols:5">
+        <div class="pstep"><div class="i">01</div><h4>Trend input</h4><p>Market and trend signals enter the workflow as the start of each cycle.</p></div>
+        <div class="pstep"><div class="i">02</div><h4>AI-assisted design</h4><p>Original product designs generated and refined with AIGC tools.</p></div>
+        <div class="pstep"><div class="i">03</div><h4>Content packaging</h4><p>Visual materials and copy prepared for each listing.</p></div>
+        <div class="pstep"><div class="i">04</div><h4>Compliance review</h4><p>A check step before anything goes live on the platform.</p></div>
+        <div class="pstep"><div class="i">05</div><h4>Data review</h4><p>Results feed back into the next trend-to-design cycle.</p></div>
+      </div>
+
+      <div class="bigstats reveal">
+        <div><div class="n">50+</div><div class="t">original designs led</div></div>
+        <div><div class="n">+60%</div><div class="t">visual-material output efficiency</div></div>
+        <div><div class="n">+35%</div><div class="t">store monthly GMV</div></div>
+      </div>
+
+      <div class="three reveal">
+        <div class="blk"><h4><i>01</i>Task decomposition</h4><p>Break an ops cycle into steps with clear inputs and outputs, so each step can be handed to a model, a tool or a person.</p></div>
+        <div class="blk"><h4><i>02</i>Multi-agent orchestration</h4><p>Different agents own different steps; the workflow sequences them and passes results forward instead of relying on manual relay.</p></div>
+        <div class="blk"><h4><i>03</i>Function calling</h4><p>Agents call tools directly &mdash; the part that replaces round trips between people.</p></div>
+      </div>
+
+      <div class="note reveal"><b>Why it matters for short drama:</b> a series is the same problem at larger grain &mdash; topic, script, assets, QC, release, review. A content line that runs as a workflow can be scaled, checked and handed to a team.</div>
     </div>
   </section>
 
@@ -439,8 +530,8 @@
     <div class="wrap">
       <div class="case-head">
         <div>
-          <div class="kicker">Part 01 · Case 01</div>
-          <h2 class="h-lg">Spiral — an experimental AI film</h2>
+          <div class="kicker">Case 03 &middot; AIGC film</div>
+          <h2 class="h-lg">Spiral &mdash; an experimental AI film</h2>
         </div>
         <div class="case-tag">EXPERIMENTAL AIGC VIDEO<br>memory · identity · media residue</div>
       </div>
@@ -503,45 +594,6 @@
           </ul>
         </div>
       </div>
-
-      <div class="kicker" style="margin-top:88px">Applied · content system</div>
-      <h2 class="h-lg">The same craft, run as a production line: 0 to 20K on TikTok</h2>
-      <p class="lede-lg">On a solo US TikTok account I ran the whole loop — positioning, topics, scripts, cuts, publishing, review and monetisation. It's my first-hand read on overseas short-video audiences, and where I actually turned AI into content supply rather than a one-off tool.</p>
-
-      <div class="bigstats reveal">
-        <div><div class="n">0&rarr;20K</div><div class="t">followers in 1 month (US)</div></div>
-        <div><div class="n">$100</div><div class="t">average earned per video</div></div>
-        <div><div class="n">Minutes</div><div class="t">per-video build time (was hours)</div></div>
-      </div>
-
-      <div class="pipeline reveal">
-        <div class="pstep"><div class="i">01</div><h4>Trend watch</h4><p>Track overseas charts, comments and rivals — record the emotion being discussed, not just the tag.</p></div>
-        <div class="pstep"><div class="i">02</div><h4>Topic call</h4><p>Filter by "who watches / why they stop / what they leave with"; drop hot topics with no reason to watch.</p></div>
-        <div class="pstep"><div class="i">03</div><h4>Script</h4><p>AI drafts; I fix the hook, pace and ending. Fixed templates for the first three seconds and the turn.</p></div>
-        <div class="pstep"><div class="i">04</div><h4>Visuals</h4><p>A prompt style library keeps the look consistent so videos don't feel like different accounts.</p></div>
-        <div class="pstep"><div class="i">05</div><h4>Publish test</h4><p>Test several titles and covers on the same cut; watch first-hours completion and engagement.</p></div>
-        <div class="pstep"><div class="i">06</div><h4>Data review</h4><p>Feed drop-off points, comment keywords and conversion back into the topic bank as next hypotheses.</p></div>
-      </div>
-
-      <div class="kicker" style="margin-top:88px">Extension · method demo</div>
-      <h2 class="h-lg">If I were starting an AI short drama, here's what I'd ship first</h2>
-      <p class="lede-lg">A method demo, not a finished project. It shows what I'd hand over in week one of a short-drama role, and the bar I use to judge whether a series can stand up.</p>
-
-      <div class="tbl-wrap reveal">
-        <table>
-          <thead><tr><th style="width:20%">Deliverable</th><th style="width:42%">Content</th><th>Bar it must clear</th></tr></thead>
-          <tbody>
-            <tr><td class="k">Topic &amp; audience</td><td>Genre, target viewer, core payoff, reference titles and the point of difference</td><td>One sentence on "who opens this, in what mood"</td></tr>
-            <tr><td class="k">Case library</td><td>Teardowns of strong short dramas &amp; AI dramas, distilled into reusable opening and twist templates</td><td>Each template names the episode and second it works</td></tr>
-            <tr><td class="k">Character cards</td><td>Identity, desire, secret, relational tension, voice and a visual anchor</td><td>Drop the name — the audience still knows who it is</td></tr>
-            <tr><td class="k">Hook sheet</td><td>Opening suspense, mid-episode twist and end-of-episode cliff for every episode</td><td>The cliff makes you tap the next one now</td></tr>
-            <tr><td class="k">Visual library</td><td>Character-consistency prompts, scene assets, light and colour baselines</td><td>Any three episodes read as one series</td></tr>
-            <tr><td class="k">Output &amp; review</td><td>Episodes per week, title matrix, cover options, completion and retention metrics</td><td>Every episode answers "what to change next"</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="note reveal"><b>Why I can write this:</b> every row maps to something I actually ran on the US TikTok account — just at the grain of a series instead of a single video. The bars come from mistakes I've made myself: style drift, hooks that spin, comment sections that never discuss the character.</div>
     </div>
   </section>
 
@@ -550,7 +602,7 @@
     <div class="wrap">
       <div class="case-head">
         <div>
-          <div class="kicker">Part 02 · Case 02</div>
+          <div class="kicker">Case 04 &middot; UI design <span class="supporting">supporting</span></div>
           <h2 class="h-lg">FateWear</h2>
         </div>
         <div class="case-tag">UI / UX<br>recommendation-driven mobile product</div>
@@ -695,12 +747,13 @@
     <div class="wrap">
       <div class="kicker">Thank you</div>
       <h2 class="h-lg">Screen craft is my base, AI is my hands, overseas content is where I practise.</h2>
-      <p class="lede-lg">What I want to do is concrete: <b>judge a topic right, produce it steadily, and let the data tell me what to change next.</b><br>Target roles — AI Content Ops (Short Drama) · Strategy Ops (Film &amp; TV Ecosystem) · Creator Ops (Film &amp; TV) · TikTok, Shanghai. Also open to AI short-drama product / screenwriter / overseas creative internships.</p>
+      <p class="lede-lg">What I want to do is concrete: <b>judge a topic right, produce it steadily, and let the data tell me what to change next.</b><br>Target role &mdash; AI Content Ops (Short Drama) &middot; TikTok, Shanghai.</p>
       <div class="ct">
         <div><span>Phone</span>+86 185-6392-3599</div>
         <div><span>Email</span><a href="mailto:2586297610@qq.com">2586297610@qq.com</a></div>
         <div><span>Education</span>The University of Sydney · Theatre &amp; Performance Studies</div>
         <div><span>Base</span>Beijing · open to Shanghai</div>
+        <div><span>Resume</span><a href="./resume/">One-page resume</a></div>
       </div>
     </div>
   </section>
@@ -709,7 +762,7 @@
 
 <footer class="foot">
   <span>Ivana Liu © 2026</span>
-  <span>AIGC Film &amp; Content × UI Product Design</span>
+  <span>AI Short-Drama Content Ops × AIGC × Agent Workflow</span>
 </footer>
 
 <script>
