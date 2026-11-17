@@ -447,6 +447,9 @@
 <!-- ============ CASE 01 · CONTENT OPS ============ -->
 <section id="midnight-tide" aria-labelledby="midnight-tide-title">
   <style>
+    #midnight-tide .tide-zh { display:none; }
+    :root[lang="zh-CN"] #midnight-tide .tide-zh { display:inline; }
+    :root[lang="zh-CN"] #midnight-tide .tide-en { display:none; }
     #midnight-tide .tide-posters { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.24fr); gap:16px; align-items:start; }
     #midnight-tide .tide-alternates { display:grid; gap:16px; }
     #midnight-tide .tide-posters img { display:block; width:100%; height:auto; border-radius:12px; }
@@ -455,10 +458,10 @@
   </style>
   <div class="wrap">
     <div class="case-head"><div>
-      <div class="kicker">Original short film · 原创短片</div>
-      <h2 class="h-lg" id="midnight-tide-title">《夜半潮汐》<br>And I Dream of You</h2>
-      <p class="lede-lg">「我遇见的是她，还是另一个我？」一部探索亲密关系与自我认同的意识流学生短片。刘盈铄独立编剧并执导。</p>
-      <a class="tide-watch" href="https://www.bilibili.com/video/BV1BV411x7Eu/" target="_blank" rel="noopener noreferrer">在哔哩哔哩观看正片 · Watch on Bilibili ↗</a>
+      <div class="kicker"><span class="tide-zh" lang="zh-CN">原创短片</span><span class="tide-en" lang="en">Original short film</span></div>
+      <h2 class="h-lg" id="midnight-tide-title"><span class="tide-zh" lang="zh-CN">《夜半潮汐》</span><span class="tide-en" lang="en">And I Dream of You</span></h2>
+      <p class="lede-lg"><span class="tide-zh" lang="zh-CN">「我遇见的是她，还是另一个我？」一部探索亲密关系与自我认同的意识流学生短片。刘盈铄独立编剧并执导。</span><span class="tide-en" lang="en">“Did I meet her, or another version of myself?” A stream-of-consciousness student short about intimacy and self-identity, written and directed by YingShuo Liu.</span></p>
+      <a class="tide-watch" href="https://www.bilibili.com/video/BV1BV411x7Eu/" target="_blank" rel="noopener noreferrer"><span class="tide-zh" lang="zh-CN">在哔哩哔哩观看正片 ↗</span><span class="tide-en" lang="en">Watch the short on Bilibili ↗</span></a>
     </div></div>
     <div class="tide-posters">
       <a href="assets/midnight-tide/poster-1.jpg"><img src="assets/midnight-tide/poster-1.jpg" loading="lazy" width="1280" height="1707" alt="《夜半潮汐》海报，两位主角站在城市天际线前"></a>
